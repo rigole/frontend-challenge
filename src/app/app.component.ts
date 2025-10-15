@@ -9,18 +9,12 @@ import { ShiplistComponent } from './shiplist/shiplist.component';
   imports: [RouterOutlet, ShiplistComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [ServicesService]
+
 })
 export class AppComponent {
   title = 'frontend-challenge';
-  public shipList: Shipment[]= [];
 
-  constructor(private service: ServicesService) {}
 
-  ngOnInit (): void{
-    this.service.getShipments().subscribe(ship => {
-      this.shipList = ship;
-    })
-  }
+
 
 }
