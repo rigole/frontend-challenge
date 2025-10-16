@@ -1,8 +1,5 @@
 
 .sidebar {
-  //position: fixed;
-  //left: 0;
-  //top: 0;
   height: 100vh;
   width: 250px;
   background-color:#1B1D22;
@@ -16,15 +13,35 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 2rem;
+  margin-top: 1.5em;
+  padding-left: 1em;
 
+  .search-box {
+    position: relative;
 
+    i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6b7280;
+    }
 
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    input {
+      width: 300px;
+      height: 40px;
+      padding-left: 2.5rem; // make space for the icon
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+
+      &:focus {
+        border-color: #3b82f6; // blue focus effect
+      }
+    }
   }
 }
+
 
 .nav-links  {
   display: flex;
@@ -34,22 +51,25 @@
 
   h2{
     font-weight: 100;
+    font-size: medium;
     text-transform: uppercase;
   }
 
   a {
     text-decoration: none;
-    color: #cbd5e1;
+    color: #979797;
     font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    padding: 0.3rem;
     transition: color 0.2s ease, background 0.2s ease;
     border-radius: 0.5rem;
 
     &:hover {
-      background-color: #334155;
+      background: linear-gradient(to right, #1B1D22,  #2D3038);
       color: white;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     &.active {
